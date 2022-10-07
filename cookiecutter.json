@@ -6,9 +6,5 @@
   "service_port": "8080",
   "service_registry": "bullyrooks/{{ cookiecutter.service_slug }}",
   "service_namespace": "bullyrooks",
-  "githuborg": "bullyrooks-org",
-
-  "_copy_without_render": [
-      "helm/**/templates/*"
-  ]
+  "githuborg": "bullyrooks-org"
 }

@@ -30,25 +30,4 @@ jobs:
       canister-username: {%raw%}${{ secrets.CANISTER_USERNAME }}{%endraw%}
       canister-password: {%raw%}${{ secrets.CANISTER_PASSWORD }}{%endraw%}
 
-  call-helm-chart:
-    needs:
-      - call-get-version
-      - call-build-image-with-push
-    uses: bullyrooks/service-workflow/.github/workflows/helm-chart.yaml@main
-    secrets:
-      access-token: {%raw%}${{ secrets.CHART_TOKEN }}{%endraw%}
-    with:
-      version: {%raw%}${{ needs.call-get-version.outputs.version }}{%endraw%}
-
-  call-deploy:
-    needs:
-      - call-helm-chart
-      - call-get-version
-    uses: bullyrooks/service-workflow/.github/workflows/okteto-deploy.yaml@main
-    with:
-      version: {%raw%}${{ needs.call-get-version.outputs.version }}{%endraw%}
-      service-name: {{ cookiecutter.service_slug }}
-      helm-chart: {{ cookiecutter.service_registry }}
-    secrets:
-      kube-config: {%raw%}${{ secrets.KUBECONFIG }}{%endraw%}
 
