@@ -83,7 +83,7 @@ jobs:
         shell: bash
         # Remove all files and folder except .git/ and cookiecutter-temp/
         run: |
-          cruft link https://github.com/bullyrooks/spring-microservice-template --config-file cookiecutter.json --no-input
+          cruft link https://github.com/bullyrooks/microservice-cookiecutter --config-file cookiecutter.json --no-input
       - name: Reinitialize git repository
         shell: bash
         # Reinitialize git after scaffolding this repository.
