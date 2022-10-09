@@ -102,6 +102,11 @@
             <artifactId>spring-data-redis</artifactId>
             <version>2.7.3</version>
         </dependency>
+
+        <!-- cookie cutter dependencies above this line.  DO NOT EDIT -->
+
+        <!-- service dependencies below this line -->
+
     </dependencies>
     <dependencyManagement>
         <dependencies>
