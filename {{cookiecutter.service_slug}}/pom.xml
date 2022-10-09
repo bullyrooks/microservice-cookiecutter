@@ -103,6 +103,12 @@
             <version>2.7.3</version>
         </dependency>
 
+        <!-- spring bus -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-bus</artifactId>
+            <version>3.1.2</version>
+        </dependency>
         <!-- cookie cutter dependencies above this line.  DO NOT EDIT -->
 
         <!-- service dependencies below this line -->
