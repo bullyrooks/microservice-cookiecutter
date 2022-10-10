@@ -95,6 +95,13 @@
             <groupId>com.fasterxml.jackson.datatype</groupId>
             <artifactId>jackson-datatype-jsr310</artifactId>
         </dependency>
+             
+         <dependency>
+                  <groupId>mysql</groupId>
+                  <artifactId>mysql-connector-java</artifactId>
+                  <version>8.0.30</version>
+         </dependency>
+
 
         <!-- cookie cutter dependencies above this line.  DO NOT EDIT -->
 
